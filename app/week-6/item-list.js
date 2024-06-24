@@ -43,8 +43,8 @@ export default function ItemList({itemstate})
           return(
               <>
               <p>Sort By:</p>
-              <button className={sortBy === 'name' ? 'bg-orange-400 rounded p-2 m-4' : 'bg-orange-600 rounded p-2 m-4'} type="button" name="name"onClick={handleSort}>Name</button> 
-              <button className={sortBy === 'category' ? 'bg-orange-400 rounded p-2 m-4' : 'bg-orange-600 rounded p-2 m-4'} type="button" name="category"onClick={handleSort}>Category</button>
+              <button className={sortBy === 'name' ? 'bg-orange-400 rounded p-2 m-4' : 'bg-orange-700 rounded p-2 m-4'} type="button" name="name"onClick={handleSort}>Name</button> 
+              <button className={sortBy === 'category' ? 'bg-orange-400 rounded p-2 m-4' : 'bg-orange-700 rounded p-2 m-4'} type="button" name="category"onClick={handleSort}>Category</button>
             <ul>
               {sortedarray.map((item) => (
                 /* key is the unique identifier incase two objects inside items.json have the same values??? in any case the key is what makes each object unique and lets
