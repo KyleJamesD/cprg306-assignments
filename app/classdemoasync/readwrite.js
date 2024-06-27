@@ -67,3 +67,12 @@ console.log(error);
 
 
 start();
+
+
+
+//use start with useeffct
+
+useEffect(()=>{
+    start();
+
+},["your api goes here if you want to update it when the API changes"]);

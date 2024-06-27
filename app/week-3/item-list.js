@@ -87,6 +87,7 @@ export default function ItemList (){
                 <Item name={item9.name} quantity={item9.quantity} category={item9.category}/>
                 <Item name={item10.name} quantity={item10.quantity} category={item10.category}/>
                 <Item name={item11.name} quantity={item11.quantity} category={item11.category}/>
+                <Item name={item12.name} quantity={item12.quantity} category={item12.category}/>
             </ul>
 
           );
