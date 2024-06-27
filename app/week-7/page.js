@@ -14,8 +14,8 @@ export default function Page(){
     }
 // variable handleitemSelect is assigned an arrow function, this arrow funciton takes a parameter (itemname) then it calls=> another function setSelecteditemname and passes it the parameter itemname.
 
-    var handleItemSelect = (item) => {
-        const cleanedItemName = item.name.split(' ')[0];
+    var handleItemSelect = (name) => {
+        const cleanedItemName = name.split(' ')[0];
         console.log(cleanedItemName);
         setSelectedItemName(cleanedItemName);
     }

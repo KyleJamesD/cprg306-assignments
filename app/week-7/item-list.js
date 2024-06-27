@@ -2,6 +2,8 @@
 import {useState} from "react";
 import Item from "./item.js";
 
+//itemstate is an array of objects prop
+//onItemSelect is a function prop
 export default function ItemList({itemstate,onItemSelect})
 {
   const [sortBy,setSortBy] = useState("name");
@@ -44,7 +46,7 @@ export default function ItemList({itemstate,onItemSelect})
                 /* key is the unique identifier incase two objects inside items.json have the same values??? in any case the key is what makes each object unique and lets
                 the Compiler update changes. */
                 <li key={item.id}>
-                  <Item name={item.name} quantity={item.quantity} category={item.category} onSelect={() => onItemSelect(item)}/>
+                  <Item name={item.name} quantity={item.quantity} category={item.category} onSelect={onItemSelect}/>
                 </li>))
               }
             </ul>
