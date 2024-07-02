@@ -15,9 +15,12 @@ export default function Page(){
 // variable handleitemSelect is assigned an arrow function, this arrow funciton takes a parameter (itemname) then it calls=> another function setSelecteditemname and passes it the parameter itemname.
 
     var handleItemSelect = (name) => {
-        const cleanedItemName = name.split(' ')[0];
-        console.log(cleanedItemName);
-        setSelectedItemName(cleanedItemName);
+       // const cleanedItemName = name.split(' ')[0];
+       // console.log(cleanedItemName);
+       //setSelectedItemName(cleanedItemName);
+        const strings = name.split(",");
+        const cleanname = strings[0].trim().replace(/([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g, '');
+        setSelectedItemName(cleanname);
     }
 
     return(
