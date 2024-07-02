@@ -24,7 +24,7 @@ export default function MealIdeas({ingredient}){
             {meals != null ? (
             <ul>
             {meals.map((meal) => (
-                <li key={meal.idmeal}>
+                <li className="p-3 bg-gray-900 w-80 m-2" key={meal.idmeal}>
                     {meal.strMeal}
                     {/*<img src={meal.strMealThumb} width="100"/>*/}      
                 </li>
