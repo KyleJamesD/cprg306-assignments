@@ -7,20 +7,47 @@ export default function MealIdeas({ingredient}){
 
 const [Meals,setMeals] = useState("");
 
-}
-
-
-useEffect(()=>{
-
-},[ingredient]);
 
 
 async function loadMealIdeas(){
-
     const fetchedMeals = await fetchMealIdeas(ingredient);
-setMeals(fetchedMeals);
+    setMeals(fetchedMeals);
 
 }
+useEffect (()=>{
+
+    loadMealIdeas();
+
+
+    },[ingredient]);
+
+
+
+    return(
+        <div>
+
+            <h1>
+                
+                {Meals.map((meal)=>{
+                    return<h1>{meal.strMeal}</h1>
+                })}
+                
+            </h1>
+
+        </div>
+
+
+
+    );
+
+
+
+
+}
+
+
+
+
 
 
 //if a component that deals with promises it must be an async function

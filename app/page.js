@@ -45,6 +45,11 @@ export default function Home() {
       </Link>
 
       <br></br>
+      <Link href="week-9">
+        week-9
+      </Link>
+
+      <br></br>
       <Link href="buttonexample">
         Button Example
       </Link>
