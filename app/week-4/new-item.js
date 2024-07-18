@@ -16,12 +16,9 @@ export function NewItem ()
     const handleSubmit = (event) => 
         {
             event.preventDefault();
-            const newItem = 
-            {
-                name,
-                quantity,
-                category
-            };
+            //create new object
+            const newItem = {name,quantity,category};
+
             window.alert(newItem.name+" "+ newItem.quantity+" "+newItem.category);
             console.log(newItem.name, newItem.quantity, newItem.category);
         }
@@ -44,22 +41,28 @@ export function NewItem ()
                 {/* •	The value of the input field should be tied to the name state variable, meaning that it displays the current value of name.???
                     •	Use the setName function in an onChange event handler to update the state of name as the user types into the field.??? 
                 */}
-                <input className="grow text-black rounded-md m-2 h-10" type="text" name="name" placeholder="Enter Name" value={name} onChange={handleNameChange} required/>
+                    <input className="grow text-black rounded-md m-2 h-10" type="text" name="name" placeholder="Enter Name" value={name} 
+                    onChange={handleNameChange} required/>
+
                 <div className="flex justify-between ">   
-                <input className="text-black rounded-md m-2 h-10 w-16s" type="number" quantity="quantity" min="0" max="99" placeholder="Enter quantity" value={quantity} onChange={handleQuantityChange} required/>
-                <select className="text-black rounded-md m-2 h-10 w-40" type="text" category="category" placeholder="Enter category" onChange={handleCategoryChange} required>
-                    <option value="Produce">Produce</option>
-                    <option value="Dairy">Dairy</option>
-                    <option value="Bakery">Bakery</option>
-                    <option value="Meat">Meat</option>
-                    <option value="Frozen Foods">Frozen Foods</option>
-                    <option value="Canned Goods">Canned Goods</option>
-                    <option value="Dry goods">Dry goods</option>
-                    <option value="Beverages">Beverages</option>
-                    <option value="Snacks">Snacks</option>
-                    <option value="Household">Household</option>
-                    <option value="Other">Other</option>        
-                </select>
+
+                    <input className="text-black rounded-md m-2 h-10 w-16s" type="number" quantity="quantity" min="0" max="99" 
+                    placeholder="Enter quantity" value={quantity} onChange={handleQuantityChange} required/>
+
+                    <select className="text-black rounded-md m-2 h-10 w-40" type="text" category="category" placeholder="Enter category"
+                    onChange={handleCategoryChange} required>
+                            <option value="Produce">Produce</option>
+                            <option value="Dairy">Dairy</option>
+                            <option value="Bakery">Bakery</option>
+                            <option value="Meat">Meat</option>
+                            <option value="Frozen Foods">Frozen Foods</option>
+                            <option value="Canned Goods">Canned Goods</option>
+                            <option value="Dry goods">Dry goods</option>
+                            <option value="Beverages">Beverages</option>
+                            <option value="Snacks">Snacks</option>
+                            <option value="Household">Household</option>
+                            <option value="Other">Other</option>        
+                    </select>
                 </div>
                 <button className="text-blue-600 border rounded py-2 px-6 m-2 bg-white"  type="submit">Submit</button>
             </form>
