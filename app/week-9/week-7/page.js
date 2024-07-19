@@ -14,9 +14,7 @@ import { db } from "../_utils/firebase";
 export default function Page(){
     const [items,setitemsBy] = useState([]);
     const [selectedItemName, setSelectedItemName] = useState("");
-    const { user, gitHubSignIn, firebaseSignOut } = useUserAuth();
-
-
+    const {user, gitHubSignIn, firebaseSignOut} = useUserAuth();
 
     var handleAddItem = (addedItem) => {
       addItem(user.uid,addedItem)
@@ -32,18 +30,6 @@ export default function Page(){
         const cleanname = strings[0].trim().replace(/([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g, '');
         setSelectedItemName(cleanname);
     }
-/**    useEffect(() => {
-        async function loadItems() {
-            if (user) {
-                const itemsArray = await getItems(db, user.uid);
-                console.log("the items array is:" + itemsArray);
-                setitemsBy(itemsArray);
-                
-            }
-        }
-        loadItems();
-    }, []);
- */
 
     useEffect(() => {
         const loadItems = async () => {
@@ -63,12 +49,6 @@ export default function Page(){
         };
         loadItems();
       }, []);
-
-
-
-
-
-
 
     
     return(

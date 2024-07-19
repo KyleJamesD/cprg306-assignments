@@ -33,12 +33,41 @@ import { collection, getDocs, addDoc, query, where } from "firebase/firestore";
 //use this fucntion to add items from your shopping list (the component with the submit button)
 //to the firebase database, it will no longer add items to the .json file
 async function addItem(userId, Item) {
-    const docRef = await addDoc(collection(db, "users", userId, "items"), Item);
+    const docRef = await addDoc(collection(db, "users", userId, "items"), 
+    //Item is the object we are passing looks like  this  { } 
+    Item
+  );
     console.log("Item is created with ID: ", docRef.id);
 
 }
 
-// Function to create an item
+/* 
+
+//this is how it is shown in the lab but we can just pass the object in directly like above.
+async function addItem(userId, Item) {
+ 
+    const docRef = await addDoc(collection(db, "users", "user1", "items"), {
+      name: "Milk 🥛",
+      quantity: 1,
+      category: "Dairy",
+      id:"this should be unique fora key value rendered in a list with the map function"
+    });
+    console.log("Item is created with ID: ", docRef.id);
+}
+
+
+
+
+
+
+*/
+
+
+
+
+
+
+// Function to create an item-- I dontunderstand the purpose of this method compared to add item???
 async function createItem(db, userId, itemData) {
     const docRef = await addDoc(collection(db, "users", userId, "items"), itemData);
     console.log("Item is created with ID: ", docRef.id);
