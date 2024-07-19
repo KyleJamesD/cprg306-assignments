@@ -6,12 +6,15 @@ import itemsData from './items';
 import {useState} from "react";
 import MealIdeas from "./meal-ideas";
 import {useUserAuth} from "../_utils/auth-context.js";
+
 export default function Page(){
     const [items,setitemsBy] = useState(itemsData);
     const [selectedItemName, setSelectedItemName] = useState("");
+    const { user, gitHubSignIn, firebaseSignOut } = useUserAuth();
 
+    
     var handleAddItem = (addedItem) => {
-        setitemsBy(items => { return[...items,addedItem]})
+        setitemsBy(items => {return[...items,addedItem]})
     }
 // variable handleitemSelect is assigned an arrow function, this arrow funciton takes a parameter (itemname) then it calls=> another function setSelecteditemname and passes it the parameter itemname.
 
@@ -25,7 +28,7 @@ export default function Page(){
     }
 
 
-    const { user, gitHubSignIn, firebaseSignOut } = useUserAuth();
+    
     return(
 
         <>

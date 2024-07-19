@@ -5,6 +5,9 @@ import { NewItem } from "./new-item";
 import itemsData from './items';
 import {useState} from "react";
 import MealIdeas from "./meal-ideas";
+
+
+
 export default function Page(){
     const [items,setitemsBy] = useState(itemsData);
     const [selectedItemName, setSelectedItemName] = useState("");

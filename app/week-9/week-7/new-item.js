@@ -34,7 +34,7 @@ export function NewItem ({onAddItem})
                 category
             };
             onAddItem(newItem);
-            console.log(newItem.name, newItem.quantity, newItem.category);
+            console.log(newItem.id,newItem.name, newItem.quantity, newItem.category);
         }
  
     //handleChange function sets the usestatehook variables to the "value" attribute which is tied to the input field

@@ -25,6 +25,7 @@ export default function Page(){
                 <ItemList itemstate={items}/>
             </div>
             <div className="flex flex-col justify-center">
+                {/* onAddItem= this is saying my parameter onAddItem= to this variable i am passsing. */}
             <NewItem onAddItem={handleAddItem}/>
             </div>
         </main>

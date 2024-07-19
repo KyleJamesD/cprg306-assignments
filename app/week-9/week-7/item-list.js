@@ -1,5 +1,7 @@
 "use client";
 import {useState} from "react";
+import Item from "./item.js";
+
 
 //itemstate is an array of objects prop
 //onItemSelect is a function prop
@@ -19,8 +21,7 @@ export default function ItemList({itemstate,onItemSelect})
               if (nameA>nameB){
                 return 1;
               }
-              return 0;
-        
+              return 0;      
             } 
           else if (sortBy === "category"){
               const categoryA = a.category.toUpperCase();
