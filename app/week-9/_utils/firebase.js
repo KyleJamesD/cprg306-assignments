@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 //week 9 addition
+//we need to import getFirestore in order to use authentication and query CRUD the database
 import { getFirestore } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -20,10 +21,14 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
+// this is needed for our to refrneces variables auth and db.
 const app = initializeApp(firebaseConfig);
 
 
 //added by kyle
+//modules 
+//this exports our auth as a refernece to our authentication 
 export const auth = getAuth(app);
 //week 9 added
+//this exports the db as a refernce to our database
 export const db = getFirestore(app);

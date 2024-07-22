@@ -20,6 +20,7 @@ export default function Page(){
       addItem(user.uid,addedItem)
       setitemsBy(items => { return[...items,addedItem]})
     }
+
 // variable handleitemSelect is assigned an arrow function, this arrow funciton takes a parameter (itemname) then it calls=> another function setSelecteditemname and passes it the parameter itemname.
 
     var handleItemSelect = (name) => {
@@ -77,5 +78,49 @@ export default function Page(){
         
         </>
     );
-
 }
+
+/*
+
+******************************************************************************************
+Hanis Functions
+async function handleAdd()
+  {
+    const item = {
+    name:"Apple"
+    category: "fruit"
+    quantity: 3
+     }
+    try{
+    const itemID = await addItem(user.uid,item);
+    console.log(itemId)
+    }
+    catch(error){
+    console.error("Cannot add to teh datatabase")
+    
+    }
+
+
+  }
+******************************************************************************
+  async function handleDelete(){
+  try{
+  //manually setting itemId should be passed in as a variable
+    itemId = ""
+    await deleteItem(user.uid,itemId);
+    }
+    catch(error){
+    console.error("Cannot add to teh datatabase")
+    
+    }
+
+  }
+***********************************************************************************
+async function handleGetItems()
+  {
+    const list = getItems(user.uid);
+    setItems(list);
+    console.log(list);
+  }
+
+*/
